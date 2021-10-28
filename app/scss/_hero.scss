@@ -1,0 +1,27 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.hero {
+  background-image: url('../../images/bg-header-mobile.png');
+  background-size: cover;
+
+  @include breakpoint-up {
+    background-image: url('../../images/bg-header-desktop.png');
+  }
+
+  & > img {
+    margin-bottom: 4.11em;
+  }
+  &__title {
+    font-size: 1.66em;
+    margin-bottom: 1.42em;
+
+    @include breakpoint-up {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__caption {
+    margin-bottom: 2.88em;
+  }
+}
