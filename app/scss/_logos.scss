@@ -1,0 +1,18 @@
+@use 'mixins' as *;
+
+.logos {
+  & > img {
+    max-width: 9.17rem;
+    height: 100%;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap column;
+  gap: 5rem;
+
+  @include breakpoint-up(large) {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,45 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.snippets {
+
+  @include breakpoint-up(large) {
+    padding: 4.63rem 1.74rem 4.63rem 0rem;
+  }
+
+  &__subcontent {
+    @include breakpoint-up(large) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 3rem;
+    }
+  }
+
+  &__image {
+    margin-bottom: 3.5rem;
+
+    @include breakpoint-up(large) {
+      position: relative;
+      padding-top: 40%;
+      margin-bottom: 0;
+      flex-basis: 50%;
+    }
+
+    & > img {
+
+      @include breakpoint-up(large) {
+        position: absolute;
+        left: -5rem;
+        top: 0;
+      }
+    }
+  }
+
+  &__subtext {
+    @include breakpoint-up(large) {
+      text-align: left;
+      max-width: 18.94rem;
+    }
+  }
+}

@@ -14,31 +14,55 @@ html {
 }
 
 body {
-  min-width: 20.83em;
+  min-width: 20.83rem;
+  max-width: 100vw;
   font-family: 'Bai Jamjuree', sans-serif;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .container {
-  padding: 6.77em 1.74em;
+  padding: 4.63rem 3rem;
 }
 
 h1,h2,h3,h4,h5,h6 {
   color: $darkGrayishBlue;
+  font-size: 1.44rem;
+  margin-bottom: 1.33rem;
+}
+
+h1 {
+  @include breakpoint-up (large) {
+    font-size: 1.88rem;
+  }
 }
 
 p {
   color: $grayishBlue;
-  font-size: 0.83em;
+  font-size: 0.83rem;
+  line-height: 1.7;
 
-  @include breakpoint-up {
+  @include breakpoint-up (large) {
     font-size: 1rem;
+  }
+}
+
+img {
+  width: 100%;
+
+  @include breakpoint-up (large) {
+    width: 70%;
   }
 }
 
 .importantTextContent {
   max-width: 37.5rem;
   margin: 0 auto;
+  margin-bottom: 3.79rem;
+}
+
+.subtext {
+  margin-bottom: 3.45rem;
 }
 
 button {
@@ -52,7 +76,7 @@ button {
   font-size: 0.78rem;
   letter-spacing: 0.1rem;
 
-  @include breakpoint-up {
+  @include breakpoint-up (large) {
     width: 12.61rem;
     height: 2.94rem;
   }
@@ -68,11 +92,11 @@ button {
   border-bottom: 0.2rem solid hsl(171, 62%, 38%);
 }
 
-.buttons_container {
+.buttonsContainer {
   :nth-child(1) {
     margin-bottom: 1.27rem;
 
-    @include breakpoint-up {
+    @include breakpoint-up (large) {
       margin-right: 0.91rem; 
     }
   }

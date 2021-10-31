@@ -1,0 +1,40 @@
+@use 'mixins' as *;
+
+.workflow {
+  & .importantTextContent {
+    margin-bottom : 5.11rem;
+  }
+
+  &__grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap column;
+    gap: 5rem;
+
+    @include breakpoint-up(medium) {
+      flex-direction: row;
+    }
+  }
+
+  &__subcontent {
+    max-width: 19.22rem;
+
+    &:first-child {
+      margin-top: 1.5rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 3.44rem;
+
+      @include breakpoint-up(medium) {
+        margin-bottom: 0;
+      }
+    }
+
+    & > img {
+      width: 2.55rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
